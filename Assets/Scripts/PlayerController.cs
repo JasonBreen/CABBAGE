@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public TransformObj obj;
     public Weapon weapon;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        obj.value = transform;
     }
 
     // Update is called once per frame

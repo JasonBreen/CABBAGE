@@ -6,10 +6,10 @@ ScriptsOnlyBuild:
     - FixedJoystick
     - FixedTouchField
     - FollowPlayer
-    - LookAt
     - PlayerController
     - ScreamOnHit
     - TouchControls
+    - TransformObj
     - UnityStandardAssets.Characters.FirstPerson.HeadBob
     - UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
     - Weapon
@@ -59,8 +59,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 95
@@ -70,39 +68,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12048}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12380}
+      Script: {instanceID: 12386}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 12998}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 13346}
     - Class: 114
-      Script: {instanceID: 13344}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13470}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13498}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 13800}
     - Class: 114
-      Script: {instanceID: 13798}
+      Script: {instanceID: 13820}
     - Class: 114
-      Script: {instanceID: 13818}
+      Script: {instanceID: 13836}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 29354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -117,6 +115,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
@@ -127,7 +127,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 258
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1020,7 +1020,7 @@ ScriptsOnlyBuild:
     className: FollowTarget
   - hash:
       serializedVersion: 2
-      Hash: 0ecbeaedf15a8a49556fdbcecb621b41
+      Hash: da5e084511e365586cbb24277ed80576
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1044,7 +1044,7 @@ ScriptsOnlyBuild:
     className: TimedObjectDestructor
   - hash:
       serializedVersion: 2
-      Hash: b3060ce90960cce35a1fa3e7535ef3db
+      Hash: 3ea9a4712ac062ae95b323ca20282fdc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowPlayer
@@ -1228,6 +1228,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 0a4389116ef08c11a39d4e652fec92f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TransformObj
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

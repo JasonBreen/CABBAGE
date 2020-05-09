@@ -2431,10 +2431,10 @@ GameObject:
   - component: {fileID: 5877798685408568319}
   - component: {fileID: 5877798685418051226}
   - component: {fileID: 5877798685418051225}
-  - component: {fileID: 5157406918422890939}
   - component: {fileID: 8974739822720684841}
   - component: {fileID: 735180126828345032}
   - component: {fileID: 7402702201473197631}
+  - component: {fileID: 8685249671609882583}
   m_Layer: 0
   m_Name: worthless pancake
   m_TagString: Untagged
@@ -2516,18 +2516,6 @@ CapsuleCollider:
   m_Height: 2.1987975
   m_Direction: 1
   m_Center: {x: 0, y: 1.0969235, z: 0}
---- !u!114 &5157406918422890939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5877798685417951635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766489d6ff644694fb8a1d91c424409e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8974739822720684841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2705,13 +2693,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5877798685417951635}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489e061d24a064f449f1bea6959b9733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingDistance: 10
-  smoothTime: 10
+  player: {fileID: 11400000, guid: 3140a05c4a678e148a65f881a09649b5, type: 2}
+--- !u!195 &8685249671609882583
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877798685417951635}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5877798685417951637
 GameObject:
   m_ObjectHideFlags: 0

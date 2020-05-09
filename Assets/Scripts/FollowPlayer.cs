@@ -1,31 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-// this script interferes with the RigidBody component somehow. fix this!
 
 public class FollowPlayer : MonoBehaviour
 {
-    private Transform player;
-    public float walkingDistance = 10.0f; //walking distance towards the player
-    //journey time
-    public float smoothTime = 10.0f;
-    //enemy velocity
-    private Vector3 velocity = Vector3.zero;
-
+    public TransformObj player;
+    private NavMeshAgent nma;
+    public float range;
+    private bool following;
+    public float angle;
+    public LayerMask targets, obstacles;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        nma = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        transform.LookAt(player);
-        float distance = Vector3.Distance(transform.position, player.position);
-        if(distance > walkingDistance)
+    {    
+        if (following)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, player.position, ref velocity, smoothTime);
+            nma.SetDestination(player.value.position);
+        }
+        else
+        {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, targets);
+            if (hitColliders.Length > 0)
+            {
+                Vector3 direction = hitColliders[0].transform.position - transform.position;
+                if (Vector3.Angle(direction, transform.forward) < angle)
+                {
+                    following = true;
+                }
+            }
         }
     }
 }

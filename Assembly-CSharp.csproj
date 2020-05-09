@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\ScreenStick.cs" />
     <Compile Include="Assets\Scripts\ShowInput.cs" />
     <Compile Include="Assets\Scripts\TouchControls.cs" />
+    <Compile Include="Assets\Scripts\TransformObj.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\to do.txt" />
