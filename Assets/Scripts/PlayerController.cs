@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            //weapon.Shoot();
+            weapon.Shoot();
         }
     }
     public void Shoot()

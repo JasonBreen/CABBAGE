@@ -3,4 +3,11 @@
 *pancakes get fired at adachi
 *health system
 *dont be like yanderedev
-*
+*make a kill counter
+*wave spawn system
+*cabbage health powerups
+*Hit point number should be 4
+*adachi has a face like doomguy
+*set amount of waves
+*akechis fade into existence
+*giant femc final boss

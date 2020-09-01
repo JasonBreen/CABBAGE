@@ -27,13 +27,15 @@ public class FollowPlayer : MonoBehaviour
         else
         {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, targets);
+
             if (hitColliders.Length > 0)
             {
-                Vector3 direction = hitColliders[0].transform.position - transform.position;
+                following = true;
+               /* Vector3 direction = hitColliders[0].transform.position - transform.position;
                 if (Vector3.Angle(direction, transform.forward) < angle)
                 {
                     following = true;
-                }
+                }*/
             }
         }
     }

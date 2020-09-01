@@ -17,12 +17,4 @@ public class LookAt : MonoBehaviour
     {
         transform.LookAt(target, Vector3.up);
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "Bullet")
-        {
-            Destroy(this);
-        }
-    }
 }

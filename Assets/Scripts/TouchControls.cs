@@ -5,6 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class TouchControls : MonoBehaviour
 {
+    public bool on;
     public FixedJoystick js;
     public FixedButton fb;
     public FixedTouchField touch;
@@ -18,7 +19,16 @@ public class TouchControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fpc.runAxis = js.Direction;
+        if (on)
+        {
+            fpc.runAxis = js.Direction;
+        }
+        else
+        {
+            float x = Input.GetAxis("Horizontal");
+            float y = Input.GetAxis("Vertical");
+            fpc.runAxis = new Vector2(x,y);
+        }
         fpc.jumpAxis = fb.Pressed;
         fpc.mouseLook.lookAxis = touch.TouchDist;
     }
